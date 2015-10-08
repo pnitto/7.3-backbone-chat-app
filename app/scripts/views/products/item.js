@@ -8,8 +8,8 @@ var MessageItemView = Backbone.View.extend({
     this.listenTo(this.collection, 'add', this.render)
   },
   render: function() {
-    var info = this.model.toJSON()
-    this.$el.html(this.template(this.model.toJSON()));
+    //var time = moment(this.model.toJSON().createdAt).format('MMMM Do YYYY, h:mm:ss a'));
+    this.$el.prepend(this.template(this.model.toJSON()))
     return this;
   }
 });
